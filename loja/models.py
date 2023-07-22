@@ -5,9 +5,9 @@ from django.db import models
 
 class Produto(models.Model):
     nome = models.CharField(max_length=200)
-    marca = models.CharField(max_length=150)
-    preco = models.FloatField()
-    descricao = models.TextField()
+    marca = models.CharField(max_length=150, verbose_name='Editora')
+    preco = models.FloatField(verbose_name='Preço')
+    descricao = models.TextField(verbose_name='Descrição')
     imagem = models.ImageField(upload_to='imagens',null=True,blank=True)
 
     def __str__(self):

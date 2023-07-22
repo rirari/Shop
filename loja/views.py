@@ -15,19 +15,19 @@ def produto_criar(request):
 
     return render(request, "loja/form.html", {'form': form})
 
-def index(request):
-    total_produtos = Produto.objects.count()
-    context = {
-        'total_produtos' : total_produtos,
-    }
-    return render(request, "loja/index.html",context)
+#def index(request):
+   # total_produtos = Produto.objects.count()
+   # context = {
+     #   'total_produtos' : total_produtos,
+    #}
+    #return render(request, "loja/index.html",context)
 
 def detalhe_produto(request,id):
     produto = Produto.objects.get(id=id)
     context = {
         'produto':produto
     }
-    return render(request,'loja/detalhe.html')
+    return render(request,'loja/detalhe.html',context)
 
 def produto_editar(request,id):
     produto = get_object_or_404(Produto,id=id)
@@ -53,3 +53,4 @@ def produto_listar(request):
     context ={
         'produtos':produtos
     }
+    return render(request, "loja/index.html",context)

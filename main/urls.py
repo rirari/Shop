@@ -16,16 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from loja.views import index, produto_criar, produto_editar, produto_listar, produto_remover, detalhe_produto
+from loja.views import produto_criar, produto_editar, produto_listar, produto_remover, detalhe_produto
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index,name='index'),
+    #path('',index,name='index'),
     path('produto/',produto_criar,name='produto_criar'),
     path('produto/editar/<int:id>/',produto_editar, name='produto_editar'),
     path('produto/remover/<int:id>/',produto_remover,name='produto_remover'),
-    path('produto/listar',produto_listar,name='produto_listar'),
+    path('',produto_listar,name='produto_listar'),
     path('detalhe/<int:id>/',detalhe_produto,name='detalhe_produto'),
 
 ]

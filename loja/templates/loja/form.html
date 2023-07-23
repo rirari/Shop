@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% block center %}
+
+<div class="container px-4 px-lg-5 mt-5">
     <h2>Formulário do Produto</h2>
-       
+
     <form method="post">
         {% csrf_token %}
         <div class="mb-3">
-            <label for="nome" class="form-label">Nome</label>
+            <label for="nome" class="form-label">Nome do livro</label>
             {{ form.nome }}
         </div>
-        
+
         <div class="mb-3">
             <label for="marca" class="form-label">Editora</label>
             {{ form.marca }}
@@ -19,10 +21,10 @@
             <label for="preco" class="form-label">Preço</label>
             {{ form.preco }}
         </div>
-        
+
         <div class="mb-3">
             <label for="descricao" class="form-label">Descrição</label>
-            {{ form.cidade }}
+            {{ form.descricao }}
         </div>
 
         <div class="mb-3">
@@ -30,6 +32,7 @@
             {{ form.imagem }}
         </div>
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>    
+        <button type="submit" class="btn btn-primary mb-5">Enviar</button>
+</div>
+</form>
 {% endblock %}

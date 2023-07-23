@@ -37,7 +37,7 @@ def produto_editar(request,id):
 
         if form.is_valid():
             form.save()
-            return redirect('produto_listar')
+            return redirect('produto_edicao')
     else:
         form = ProdutoForm(instance=produto)
 
@@ -46,7 +46,7 @@ def produto_editar(request,id):
 def produto_remover(request, id):
     produto = get_object_or_404(Produto, id=id)
     produto.delete()
-    return redirect('produto_listar') 
+    return redirect('produto_edicao') 
 
 def produto_listar(request):
     produtos = Produto.objects.all()
@@ -54,3 +54,12 @@ def produto_listar(request):
         'produtos':produtos
     }
     return render(request, "loja/index.html",context)
+
+def produto_edicao(request):
+    produtos = Produto.objects.all()
+    context ={
+        'produtos':produtos
+    }
+    return render(request, "loja/produto.html",context)
+
+

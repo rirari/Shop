@@ -8,10 +8,8 @@ class Produto(models.Model):
     marca = models.CharField(max_length=150, verbose_name='Editora')
     preco = models.FloatField(verbose_name='Preço')
     descricao = models.TextField(verbose_name='Descrição')
-    imagem = models.ImageField(upload_to='media/imagens')
+    imagem = models.ImageField(upload_to = 'imagens')
 
     def __str__(self):
         return self.nome
-
-    
 

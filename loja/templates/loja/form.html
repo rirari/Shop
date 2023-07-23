@@ -5,7 +5,8 @@
 <div class="container px-4 px-lg-5 mt-5">
     <h2>Formulário do Produto</h2>
 
-    <form method="post">
+    <form method="POST">
+
         {% csrf_token %}
         <div class="mb-3">
             <label for="nome" class="form-label">Nome do livro</label>
@@ -33,6 +34,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary mb-5">Enviar</button>
+    </form>
 </div>
-</form>
+
 {% endblock %}

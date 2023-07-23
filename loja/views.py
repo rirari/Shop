@@ -10,10 +10,12 @@ def produto_criar(request):
         if form.is_valid():
             form.save()
             form = ProdutoForm()
+            
     else:
         form = ProdutoForm()
 
     return render(request, "loja/form.html", {'form': form})
+
 
 #def index(request):
    # total_produtos = Produto.objects.count()

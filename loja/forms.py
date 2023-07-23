@@ -1,6 +1,6 @@
-from django.forms import ModelForm
 from django import forms
 from .models import Produto
+from django.forms import ModelForm
 
 class ProdutoForm(ModelForm):
 
@@ -13,4 +13,5 @@ class ProdutoForm(ModelForm):
             'preco' : forms.NumberInput(attrs={'class': 'form-control' }),
             'descricao': forms.TextInput(attrs={'class': 'form-control' }),
             'imagem': forms.FileInput(attrs={'class': 'form-control' })
+            
         }

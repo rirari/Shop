@@ -11,25 +11,21 @@
             {% for produto in produtos %}
             <div class="col mb-5">
                 <div class="card h-100">
-                    <!-- Product image-->
+                    <!-- Product image -->
                     <img class="card-img-top mt-5" src="{{ produto.imagem.url }}" alt="Imagem do produto" />
-                    <!-- Product details-->
+                    <!-- Product details -->
                     <div class="card-body p-4">
                         <div class="text-center">
-                            <!-- Product name-->
+                            <!-- Product name -->
                             <h5 class="fw-bolder">{{ produto.nome }}</h5>
-                            <!-- Product price-->
+                            <!-- Product price -->
                             <div>
                                 <p>$ {{ produto.preco }}</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Product actions-->
+                    <!-- Product actions -->
                     <div>
-                        <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'detalhe_produto' produto.id %}">Detalhes do
-                                    produto</a></div>
-                        </div> -->
                         <div class="btn-group">
                             <div class="card-footer col-md-4 p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto"
@@ -47,4 +43,5 @@
         </div>
     </div>
 </section>
+
 {% endblock %}

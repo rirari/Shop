@@ -21,7 +21,7 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top mt-5" src="{{ produto.imagem.url }}" alt="Imagem do produto"/>
+                    <img class="card-img-top mt-5" src="{{ produto.imagem.url }}" alt="Imagem do produto" />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -37,23 +37,18 @@
                             </div>
                             <!-- Product price-->
                             <div>
-                                <p>$ {{ produto.preco }}</p>   
+                                <p>$ {{ produto.preco }}</p>
                             </div>
-                            
+
                         </div>
                     </div>
                     <!-- Product actions-->
-                    <div> 
+                    <div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'detalhe_produto' produto.id %}">Detalhes do
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="{% url 'detalhe_produto' produto.id %}">Detalhes do
                                     produto</a></div>
                         </div>
-                        <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'produto_editar' id=produto.id %}">Editar</a></div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'produto_remover' id=produto.id %}">Remover</a></div>
-                        </div> -->
                     </div>
                 </div>
             </div>

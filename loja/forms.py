@@ -9,6 +9,7 @@ class ProdutoForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'nome' : forms.TextInput(attrs={'class': 'form-control' }),
+            'nome_autor' : forms.TextInput(attrs={'class': 'form-control' }),
             'marca' : forms.TextInput(attrs={'class': 'form-control' }),
             'preco' : forms.NumberInput(attrs={'class': 'form-control' }),
             'descricao': forms.TextInput(attrs={'class': 'form-control' }),

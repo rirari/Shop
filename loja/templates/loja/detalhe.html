@@ -10,10 +10,13 @@
             <div class="col-md-6">
                 <div class="small mb-1">Editora {{ produto.marca }}</div>
                 <h1 class="display-5 fw-bolder">{{ produto.nome }}</h1>
-                <div class="fs-5 mb-5">
+                <div class="fs-5 mt-2 mb-5">
                     <!-- <span class="text-decoration-line-through">$45.00</span> -->
                     <span>$ {{ produto.preco }}</span>
                 </div>
+
+                <div class="mt-1 mb-3">Escrito por {{ produto.nome_autor }}</div
+
                 <p class="lead">{{ produto.descricao }}</p>
                 <div class="d-flex">
                     <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
